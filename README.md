@@ -1,2 +1,2 @@
 # pourover-website
-Support and privacy pages for Pourover Eddy
+Home page, support and privacy pages for Pourover Eddy
