@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pourover Eddy - Master the art of pour-over coffee with guided recipes, precise timers, and beautiful themes">
+    <meta name="keywords" content="pour over coffee, coffee timer, v60, brewing guide, specialty coffee, coffee app">
+    <title>Pourover Eddy - Master the art of pour-over coffee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #FFFBF0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #D4745C;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D4745C;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: #4A4A4A;
+            margin-bottom: 20px;
+        }
+
+        .hero .tagline {
+            font-size: 1.8em;
+            color: #D4745C;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #D4745C;
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(212, 116, 92, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 116, 92, 0.4);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 80px 20px;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #4A4A4A;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background-color: #FFFBF0;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            color: #4A4A4A;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 20px;
+            background-color: #FFFBF0;
+        }
+
+        .screenshots-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .screenshots-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+        }
+
+        .screenshot-item {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .screenshot-item img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .screenshot-item p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background-color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5em;
+            color: #4A4A4A;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A4A4A;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #D4745C;
+        }
+
+        .footer-email {
+            margin-bottom: 20px;
+        }
+
+        .footer-email a {
+            color: #D4745C;
+            text-decoration: none;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero .tagline {
+                font-size: 1.4em;
+            }
+
+            .hero .subtitle {
+                font-size: 1em;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9em;
+            }
+
+            .screenshot-item img {
+                width: 250px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scrollbar styling for screenshots */
+        .screenshots-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshots-scroll::-webkit-scrollbar-track {
+            background: #F5F1E8;
+            border-radius: 4px;
+        }
+
+        .screenshots-scroll::-webkit-scrollbar-thumb {
+            background: #D4745C;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Pourover Eddy</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Pourover Eddy</h1>
+        <p class="tagline">Master the art of pour-over coffee</p>
+        <p class="subtitle">Elevate your daily coffee ritual with guided recipes, precise timers, and beautiful themes. Perfect for V60 enthusiasts and specialty coffee lovers.</p>
+        <a href="https://apps.apple.com/us/app/pourover-eddy/id6754361588" class="cta-button">Download on the App Store</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Pourover Eddy?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Guided Brewing</h3>
+                    <p>Follow step-by-step instructions with precision timers for perfect extraction every time. Each pour is timed and guided.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">☕</div>
+                    <h3>4:6 Method</h3>
+                    <p>Customize balance and strength to your taste with the proven 4:6 brewing method. Adjustable for any serving size.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Themes</h3>
+                    <p>Choose from carefully crafted color palettes that match your coffee mood. Light Roast, Medium Roast, Dark Roast, and more.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📖</div>
+                    <h3>Equipment Guide</h3>
+                    <p>Helpful checklists and brewing tips ensure you have everything ready. Perfect for beginners and experts alike.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Works Offline</h3>
+                    <p>No internet required. All recipes and features work completely offline once installed.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Adjustable Recipes</h3>
+                    <p>Customize coffee weight and water ratios to brew exactly how much you want, when you want it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="screenshots-container">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="screenshots-scroll">
+                <div class="screenshot-item">
+                    <img src="screenshots/9_Pourover_Eddy_Landing.png" alt="Landing page with brewer and recipe selection">
+                    <p>Select your brewer and recipe</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/3_Pourover_Eddy.png" alt="Recipe preview screen">
+                    <p>Review your brew details</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/1_Pourover_progress.png" alt="Brewing timer in progress">
+                    <p>Follow guided pour instructions</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/4_Pourover_Eddy_Settings.png" alt="Settings screen">
+                    <p>Customize your experience</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/5_Pourover_Eddy_Theme.png" alt="Theme selection">
+                    <p>Choose your favorite theme</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/10_Pourover_Eddy_Success.png" alt="Brewing complete screen">
+                    <p>Enjoy your perfect cup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Start brewing better coffee today</h2>
+        <a href="https://apps.apple.com/us/app/pourover-eddy/id6754361588" class="cta-button">Download on the App Store</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+        <div class="footer-email">
+            <a href="mailto:feedback@pourovereddy.com">feedback@pourovereddy.com</a>
+        </div>
+        <p class="copyright">&copy; 2025 Akshay Mhatre. All rights reserved.</p>
+    </footer>
+</body>
+</html>
